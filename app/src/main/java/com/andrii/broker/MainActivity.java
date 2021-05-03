@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         SharedPreferences sharedPreferences = getSharedPreferences(namePreference,MODE_PRIVATE);
         String nameUser = sharedPreferences.getString("name", null);
-        if(!nameUser.isEmpty()){
+        if(!(nameUser ==null)){
             Intent i = new Intent(this, BrokerActivity.class);
             startActivity(i);
         }

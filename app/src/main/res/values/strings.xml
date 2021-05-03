@@ -13,7 +13,7 @@
     <string name="btn_play">Jugar otra vez</string>
     <string name="btn_exit">Salir</string>
     <string name="record_not_broken">Oppss!</string>
-    <string name="last_record">Último registro</string>
+    <string name="last_record">Último Record</string>
     <string name="error_money">No hay dinero para comprar</string>
-    <string name="new_record">Nuevo registro</string>
+    <string name="new_record">Nuevo Record</string>
 </resources>
