@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Broker</string>
+    <string name="main_text_name">Nombre</string>
+    <string name="main_text_start">Empezar</string>
+    <string name="error_name">Pone el nombre</string>
+    <string name="error_undefined_user">Hay que crear perfil</string>
+    <string name="broker_btn_buy">Comprar</string>
+    <string name="broker_btn_sell">Vender</string>
+    <string name="broker_text_shares">Aciones 0</string>
+    <string name="broker_text_shares_price">0.00</string>
+    <string name="broker_text_capital">Capital</string>
+    <string name="text_very_good">Enhorabuena!!!</string>
+    <string name="btn_play">Jugar otra vez</string>
+    <string name="btn_exit">Salir</string>
+    <string name="record_not_broken">Oppss!</string>
+    <string name="last_record">Último registro</string>
+    <string name="error_money">No hay dinero para comprar</string>
+    <string name="new_record">Nuevo registro</string>
+</resources>

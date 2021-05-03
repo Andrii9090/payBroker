@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andrii.broker.BrokerActivity">
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        tools:progress="50"
+        android:max="100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/broker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/seekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Name"
+        android:textSize="40sp"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/broker_price"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_width="200dp"
+        tools:layout_height="200dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/broker_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintHeight_percent=".3"
+        app:layout_constraintBottom_toTopOf="@id/broker_btn_sell"
+        android:text="0.0"
+        android:textSize="50dp"
+        android:gravity="center"
+        style="@style/brokerTable"
+        />
+
+    <Button
+        android:id="@+id/broker_btn_buy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/broker_btn_buy"
+        app:layout_constraintTop_toBottomOf="@id/broker_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".4"
+        />
+
+    <ImageView
+        android:id="@+id/broker_arrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@id/broker_btn_sell"
+        app:layout_constraintStart_toEndOf="@id/broker_btn_buy"
+        app:layout_constraintTop_toBottomOf="@id/broker_price"
+        tools:src="@drawable/ic_arrow_up" />
+    <Button
+        android:id="@+id/broker_btn_sell"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/broker_btn_sell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broker_price"
+        app:layout_constraintWidth_percent=".4"
+        />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/broker_text_shares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/broker_text_shares"
+        app:layout_constraintTop_toBottomOf="@id/space"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/broker_text_shares_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/broker_text_shares_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space"
+        android:padding="10dp"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/broker_text_capital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/broker_text_capital"
+        app:layout_constraintTop_toBottomOf="@id/broker_text_shares"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/broker_text_capital_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broker_text_shares_price"
+        android:padding="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/broker_text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textSize="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/broker_text_capital"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
