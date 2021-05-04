@@ -66,7 +66,11 @@ public class ResultActivity extends AppCompatActivity {
             editor.apply();
             Log.e("TOTAL", String.valueOf(BrokerActivity.CAPITAL_DEFAULT));
             title.setText(getString(R.string.record_not_broken));
-            mainText.setText(getString(R.string.last_record)+" "+totalOld);
+            if(totalOld>1000.0f)
+                mainText.setText(getString(R.string.last_record)+" "+totalOld);
+            else{
+                mainText.setText("");
+            }
             image.setImageDrawable(getDrawable(R.drawable.medalla));
         }
     }
