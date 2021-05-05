@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Specific Feed activity theme -->
+    <style name="FeedActivityThemeLight" parent="ActivityTheme.Primary.Base.Light">
+        <item name="android:windowBackground">#F4F4F6</item>
+    </style>
+    <style name="FeedActivityThemeDark" parent="ActivityTheme.Primary.Base.Dark">
+        <item name="android:windowBackground">#33343B</item>
+    </style>
+</resources>

@@ -1,10 +1,18 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="ActivityTheme.Primary.Base.Light" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">#0D133E</item>
+        <item name="android:textColorPrimary">#33343B</item>
+        <item name="android:textColorSecondary">#8033343B</item>
+        <item name="android:colorButtonNormal">#03A9F4</item>
+    </style>
+    <!-- Dark base activity theme -->
+    <style name="ActivityTheme.Primary.Base.Dark"    parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/grey</item>
+        <item name="android:textColor">#707070</item>
+        <item name="android:textColorPrimary">#171717</item>
+        <item name="android:textColorSecondary">#676767</item>
+        <item name="android:colorButtonNormal">#040A42</item>
     </style>
 
     <style name="brokerTable" parent="Widget.AppCompat.TextView">
@@ -13,4 +21,12 @@
         </item>
     </style>
 
+    <style name="ButtonBuy" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">#FF9800</item>
+    </style>
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#292929</color>
 </resources>

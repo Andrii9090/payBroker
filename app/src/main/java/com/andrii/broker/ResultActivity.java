@@ -26,8 +26,13 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences sharedPreferences = getSharedPreferences(MainActivity.namePreference, MODE_PRIVATE);
+        if (sharedPreferences.getBoolean("theme_night", false)) {
+            setTheme(R.style.ActivityTheme_Primary_Base_Dark);
+        }else{
+            setTheme(R.style.ActivityTheme_Primary_Base_Light);
+        }
         setContentView(R.layout.activity_result);
-
         title = (TextView)findViewById(R.id.result_title);
         mainText = (TextView)findViewById(R.id.result_main_text);
         btnPlay = (Button)findViewById(R.id.result_btn_play);

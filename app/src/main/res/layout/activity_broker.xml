@@ -5,14 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.andrii.broker.BrokerActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:progress="0"
         tools:progress="50"
-        android:max="100"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
@@ -44,8 +49,8 @@
         app:layout_constraintBottom_toTopOf="@id/broker_btn_sell"
         android:text="0.0"
         android:textSize="50dp"
-        android:gravity="center"
         style="@style/brokerTable"
+        android:gravity="center"
         />
 
     <Button
@@ -76,19 +81,12 @@
         app:layout_constraintWidth_percent=".4"
         />
 
-    <Space
-        android:id="@+id/space"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/broker_text_shares"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/broker_text_shares"
-        app:layout_constraintTop_toBottomOf="@id/space"
+        app:layout_constraintTop_toBottomOf="@id/broker_btn_sell"
         app:layout_constraintStart_toStartOf="parent"
         android:padding="10dp"
         android:textSize="20sp"
@@ -100,7 +98,7 @@
         android:layout_height="wrap_content"
         android:text="@string/broker_text_shares_price"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/space"
+        app:layout_constraintTop_toBottomOf="@id/broker_btn_sell"
         android:padding="10dp"
         android:textSize="20sp"
         />
